@@ -182,6 +182,16 @@ public class TypeScriptAxiosClientCodegen extends AbstractTypeScriptClientCodege
         return objs;
     }
 
+    @Override
+    public CodegenModel fromModel(String name, Schema model) {
+        CodegenModel codegenModel = super.fromModel(name, model);
+
+        // Sort vars by property name
+        codegenModel.vars.sort((a, b) -> a.baseName.compareTo(b.baseName));
+
+        return codegenModel;
+    }
+
     private void updateOperationParameterForEnum(OperationsMap operations) {
         // This method will add extra information as to whether or not we have enums and
         // update their names with the operation.id prefixed.

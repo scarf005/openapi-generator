@@ -45,7 +45,7 @@
       "modules/openapi-generator-core": true,
       "modules/openapi-generator-gradle-plugin": true,
       "modules/openapi-generator-maven-plugin": true,
-      "modules/openapi-generator-online": true,
+      "modules/openapi-generator-online": true
     },
     "files.trimFinalNewlines": false,
     "files.trimTrailingWhitespace": true,
@@ -70,7 +70,8 @@
       "**/bin",
       "**/archetype-resources",
       "samples"
-    ]
+    ],
+    "java.compile.nullAnalysis.mode": "automatic"
   },
   "extensions": {
     "recommendations": [
